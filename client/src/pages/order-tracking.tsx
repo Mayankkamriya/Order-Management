@@ -176,11 +176,11 @@ export default function OrderTrackingPage() {
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium truncate">{item.name}</p>
                       <p className="text-xs text-muted-foreground">
-                        x{item.quantity} @ ${item.price.toFixed(2)}
+                        x{item.quantity} @ ₹{item.price.toFixed(2)}
                       </p>
                     </div>
                     <span className="text-sm font-semibold whitespace-nowrap">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
                 ))}
@@ -189,7 +189,7 @@ export default function OrderTrackingPage() {
               <div className="flex justify-between font-bold">
                 <span>Total</span>
                 <span className="text-primary" data-testid="text-order-total">
-                  ${order.total.toFixed(2)}
+                  ₹{order.total.toFixed(2)}
                 </span>
               </div>
             </CardContent>

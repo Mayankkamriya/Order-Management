@@ -193,7 +193,7 @@ export default function CheckoutPage() {
                           Placing Order...
                         </>
                       ) : (
-                        `Place Order - $${totalPrice.toFixed(2)}`
+                        `Place Order - ₹${totalPrice.toFixed(2)}`
                       )}
                     </Button>
                   </form>
@@ -227,7 +227,7 @@ export default function CheckoutPage() {
                         </p>
                       </div>
                       <span className="text-sm font-semibold whitespace-nowrap">
-                        ${(cartItem.menuItem.price * cartItem.quantity).toFixed(2)}
+                        ₹{(cartItem.menuItem.price * cartItem.quantity).toFixed(2)}
                       </span>
                     </div>
                   ))}
@@ -236,7 +236,7 @@ export default function CheckoutPage() {
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span>${totalPrice.toFixed(2)}</span>
+                    <span>₹{totalPrice.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Delivery Fee</span>
@@ -246,7 +246,7 @@ export default function CheckoutPage() {
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
                     <span className="text-primary" data-testid="text-checkout-total">
-                      ${totalPrice.toFixed(2)}
+                      ₹{totalPrice.toFixed(2)}
                     </span>
                   </div>
                 </div>

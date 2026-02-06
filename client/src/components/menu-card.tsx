@@ -34,7 +34,7 @@ export function MenuCard({ item }: MenuCardProps) {
             {item.name}
           </h3>
           <span className="text-primary font-bold text-base whitespace-nowrap" data-testid={`text-item-price-${item._id}`}>
-            ${item.price.toFixed(2)}
+            ₹{item.price.toFixed(2)}
           </span>
         </div>
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2" data-testid={`text-item-desc-${item._id}`}>

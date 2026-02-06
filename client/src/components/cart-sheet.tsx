@@ -61,7 +61,7 @@ export function CartSheet() {
                   <div className="flex-1 min-w-0">
                     <h4 className="font-medium text-sm truncate">{cartItem.menuItem.name}</h4>
                     <p className="text-primary font-semibold text-sm mt-0.5">
-                      ${(cartItem.menuItem.price * cartItem.quantity).toFixed(2)}
+                      ₹{(cartItem.menuItem.price * cartItem.quantity).toFixed(2)}
                     </p>
                     <div className="flex items-center gap-2 mt-2">
                       <Button
@@ -109,7 +109,7 @@ export function CartSheet() {
               <div className="flex items-center justify-between">
                 <span className="font-medium">Subtotal</span>
                 <span className="font-bold text-lg" data-testid="text-cart-total">
-                  ${totalPrice.toFixed(2)}
+                  ₹{totalPrice.toFixed(2)}
                 </span>
               </div>
               <SheetFooter className="mt-0">
