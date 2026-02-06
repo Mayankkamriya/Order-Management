@@ -1,5 +1,5 @@
 import { MenuItemModel, OrderModel } from "./models";
-import type { InsertMenuItem, InsertOrder, OrderStatus } from "@shared/schema";
+import type { InsertMenuItem, InsertOrder, OrderStatus } from "../shared/schema";
 
 export interface IStorage {
   getMenuItems(): Promise<any[]>;

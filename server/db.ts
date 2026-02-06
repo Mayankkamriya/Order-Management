@@ -1,8 +1,11 @@
 import mongoose from "mongoose";
-import { log } from "./index";
 import "dotenv/config";
 
 export async function connectDB() {
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+
   const uri = process.env.MONGODB_URI;
   if (!uri) {
     throw new Error("MONGODB_URI environment variable is not set");
@@ -10,9 +13,9 @@ export async function connectDB() {
 
   try {
     await mongoose.connect(uri);
-    log("Connected to MongoDB", "mongodb");
+    console.log("Connected to MongoDB");
   } catch (error) {
-    log(`MongoDB connection error: ${error}`, "mongodb");
+    console.error(`MongoDB connection error: ${error}`);
     throw error;
   }
 }
