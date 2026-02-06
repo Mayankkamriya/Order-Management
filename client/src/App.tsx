@@ -6,12 +6,16 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/lib/cart-context";
 import { Header } from "@/components/header";
 import MenuPage from "@/pages/menu";
+import CheckoutPage from "@/pages/checkout";
+import OrderTrackingPage from "@/pages/order-tracking";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={MenuPage} />
+      <Route path="/checkout" component={CheckoutPage} />
+      <Route path="/order/:id" component={OrderTrackingPage} />
       <Route component={NotFound} />
     </Switch>
   );
