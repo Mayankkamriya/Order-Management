@@ -6,11 +6,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/lib/cart-context";
 import { Header } from "@/components/header";
 import MenuPage from "@/pages/menu";
+import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={MenuPage} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
