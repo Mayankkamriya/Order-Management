@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import mongoose from "mongoose";
 import { MenuItemModel, OrderModel } from "../server/models";
+import "dotenv/config";
 
 const MONGODB_URI = process.env.MONGODB_URI || "";
 

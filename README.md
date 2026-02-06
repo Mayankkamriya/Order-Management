@@ -91,5 +91,9 @@ Orders automatically progress through these stages (via server-side simulator):
 - Set `MONGODB_URI` in Vercel Environment Variables
 - Run `npm run build` for production build
 
+## Testing
+- Run `npx vitest` to execute tests
+- Tests cover: MenuItem CRUD, Order CRUD, status progression, Zod input validation
+
 ## Recent Changes
 - 2026-02-06: Initial build - Full MVP with menu, cart, checkout, order tracking, MongoDB integration, tests
