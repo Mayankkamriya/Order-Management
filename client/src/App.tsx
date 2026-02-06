@@ -5,6 +5,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/lib/cart-context";
 import { Header } from "@/components/header";
+import MenuPage from "@/pages/menu";
+
+function Router() {
+  return (
+    <Switch>
+      <Route path="/" component={MenuPage} />
+    </Switch>
+  );
+}
 
 function App() {
   return (
