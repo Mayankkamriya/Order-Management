@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { connectDB } from "../lib/db";
+import { connectDB } from "../../server/db";
 import { OrderModel } from "../../server/models";
 import { insertOrderSchema } from "../../shared/schema";
 import { z } from "zod";

@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import mongoose from "mongoose";
-import { connectDB } from "./lib/db";
+import { connectDB } from "./../server/db";
 
 export default async function handler(_req: VercelRequest, res: VercelResponse) {
   try {

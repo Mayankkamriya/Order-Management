@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { connectDB } from "../lib/db";
+import { connectDB } from "../../server//db";
 import { MenuItemModel } from "../../server/models";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
